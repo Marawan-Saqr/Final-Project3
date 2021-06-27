@@ -278,16 +278,25 @@ $(document).ready(function(){
 
 //====================================================//
 
+//scrollTop for home
 
+$(document).ready(function(){
 
+    $(window).scroll(function(){
+       if($(window).scrollTop() > 80) {
+           $("nav").css("background", "rgb(74 74 74 / 40%)");
+           $(".scroll-top i").css("display", "block");
 
+       } else if($(window).scrollTop() < 80){
+            $("nav").css("background", "transparent");
+            $(".scroll-top i").css("display", "none");
+       }
+           
+    });
 
+}); // document
 
-
-
-
-
-
+//=====================================================//
 // Plugins
 var scroll = new SmoothScroll('a[href*="#"]', {
 	speed: 250
